@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web - Cella</title>
+<style>
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff; }
+        50% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; }
+        100% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff; }
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background: url('https://files.catbox.moe/0lrq2k.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    animation: glow 1.5s infinite alternate;
+}
+
+.about-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0088cc;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #0088cc;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background-color: #005f99;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+#qrisModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+#qrisModal img {
+    width: 200px;
+    height: auto;
+}
+
+#closeModal {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+</style></head>
+<body>
+    <div class="container">
+        <img src="https://files.catbox.moe/xe7m7k.jpeg" alt="Profile" class="profile-img">
+        <h1 class="name">Hello, I'm Cella</h1>
+        <h2 class="about-title">ABOUT ME</h2>
+        <p class="about">Haii, let me introduce myself. I'm someone who tends to be lazy but loves exploring things that catch my interest. If you need any help, feel free to contact me!</p><div class="btn-container">
+        <a href="https://t.me/CellaSpecsArab" class="btn" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">Telegram
+        </a>
+        <a href="https://wa.me/62882007138253" class="btn" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">WhatsApp
+        </a>
+        <button class="btn" onclick="openQRIS()">
+            <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Payment">Payment QRIS
+        </button>
+        <a href="https://t.me/+m7EULlugdnMyOWMx" class="btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Room">Room Publick
+        </a>
+        <a href="https://www.mediafire.com/file/jqo4mcptj2jccg7/saturnus.zip/file" class="btn" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/633/633600.png" alt="Download">Download Script DDoS Free
+        </a>
+    </div>
+</div><div id="qrisModal">
+    <button id="closeModal" onclick="closeQRIS()">Close</button>
+    <img src="https://files.catbox.moe/zyb1bd.png" alt="QRIS Payment">
+</div><script>
+    function openQRIS() {
+        document.getElementById("qrisModal").style.display = "block";
+    }
+    
+    function closeQRIS() {
+        document.getElementById("qrisModal").style.display = "none";
+    }
+</script></body>
+</html>
