@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Store Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+body{
+    background:#070b14;
+    color:white;
+    overflow-x:hidden;
+}
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+    radial-gradient(circle at top left,#5b3bff33,transparent 30%),
+    radial-gradient(circle at bottom right,#00cfff22,transparent 30%),
+    #070b14;
+}
+header{
+    padding:40px 20px 10px;
+    display:flex;
+    justify-content:center;
+}
+.profile-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+.profile{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid rgba(255,255,255,0.08);
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.logo{
+    font-size:30px;
+    font-weight:700;
+    background:linear-gradient(90deg,#8f5cff,#00d4ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.hero{
+    width:100%;
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+.container{
+    width:100%;
+    max-width:1150px;
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:30px;
+}
+.card,.section{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    overflow:hidden;
+    backdrop-filter:blur(14px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+.banner{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+.card-content,.section{
+    padding:25px;
+}
+.badge{
+    display:inline-flex;
+    align-items:center;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:10px 14px;
+    border-radius:100px;
+    font-size:13px;
+    margin-bottom:18px;
+    color:#d8d8d8;
+}
+.title{
+    font-size:33px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+.desc{
+    color:#a5a5a5;
+    line-height:1.7;
+    font-size:14px;
+    margin-bottom:22px;
+}
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.info-box{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:18px;
+    padding:14px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+.info-box svg{
+    width:20px;
+    height:20px;
+    fill:#7cd8ff;
+}
+.info-text{
+    font-size:14px;
+    color:#d7d7d7;
+}
+.right{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+.section-title{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+.skill{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:14px 18px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.skill svg{
+    width:24px;
+    height:24px;
+}
+.projects{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+.project{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.07);
+    border-radius:22px;
+    padding:20px;
+}
+.project p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.7;
+}
+.group-card{
+    margin-top:22px;
+    background:linear-gradient(135deg,rgba(111,92,255,0.2),rgba(0,212,255,0.12));
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    padding:24px;
+}
+.join-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:white;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:14px 20px;
+    border-radius:16px;
+    margin-top:16px;
+}
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+    .projects{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+<div class="profile-wrap">
+<div class="profile">
+<img src="https://files.catbox.moe/profile.jpg">
+</div>
+<div class="logo">GAME STORE</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="card">
+
+<img class="banner" src="https://files.catbox.moe/banner.jpg">
+
+<div class="card-content">
+
+<div class="badge">✦ Trusted Digital Seller</div>
+
+<div class="title">Jual Akun Game</div>
+
+<p class="desc">
+Menyediakan akun game premium, jasa JB,
+custom website modern, dan berbagai kebutuhan
+digital dengan tampilan elegant dan modern.
+</p>
+
+<div class="info">
+
+<div class="info-box">
+<svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 3 3.9 5.4 6.9 6.9l2.3-2.3c.3-.3.8-.4 1.2-.3 1 .3 2 .4 3 .4.7 0 1.2.5 1.2 1.2V21c0 .7-.5 1.2-1.2 1.2C10.4 22.2 1.8 13.6 1.8 3c0-.7.5-1.2 1.2-1.2h4.2c.7 0 1.2.5 1.2 1.2 0 1 .1 2 .4 3 .1.4 0 .9-.3 1.2l-1.9 2.6z"/></svg>
+<div class="info-text">+62 812-3456-7890</div>
+</div>
+
+<div class="info-box">
+<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+<div class="info-text">gamestore@gmail.com</div>
+</div>
+
+<div class="info-box">
+<svg viewBox="0 0 24 24"><path d="M9.04 15.47 8.9 19c.42 0 .6-.18.82-.4l1.96-1.88 4.06 2.97c.74.4 1.27.2 1.46-.69l2.64-12.4c.28-1.1-.4-1.53-1.12-1.26L3.3 10.9c-1.06.42-1.05 1 .18 1.38l3.95 1.23L16.5 7.8c.43-.27.82-.12.5.15"/></svg>
+<div class="info-text">@gamestoreofficial</div>
+</div>
+
+</div>
+
+<div class="group-card">
+<h2>Join Group WhatsApp</h2>
+<p>Gabung ke komunitas untuk info stok akun, promo terbaru, jasa JB, dan update project.</p>
+
+<a href="https://chat.whatsapp.com/xxxxx" class="join-btn">
+Join Sekarang
+</a>
+</div>
+
+</div>
+</div>
+
+<div class="right">
+
+<div class="section">
+<div class="section-title">Skills</div>
+
+<div class="skills">
+
+<div class="skill">
+<svg viewBox="0 0 128 128">
+<path fill="#E44D26" d="M19 114L9 0h110l-10 114-45 14"/>
+</svg>
+<span>HTML & CSS</span>
+</div>
+
+<div class="skill">
+<svg viewBox="0 0 128 128">
+<path fill="#F7DF1E" d="M1.4 1.4h125.2v125.2H1.4z"/>
+</svg>
+<span>JavaScript</span>
+</div>
+
+<div class="skill">
+<svg viewBox="0 0 128 128">
+<path fill="#0ACF83" d="M42 128c11.6 0 21-9.4 21-21V86H42c-11.6 0-21 9.4-21 21s9.4 21 21 21z"/>
+</svg>
+<span>UI Modern Design</span>
+</div>
+
+<div class="skill">
+<svg viewBox="0 0 128 128">
+<path fill="#fff" d="M19 0L0 109l35 19 74-19 19-109zm72 82l-29 8-24-13 4-23 29-8 24 13z"/>
+</svg>
+<span>JB / Joki Build</span>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Portfolio</div>
+
+<div class="projects">
+
+<div class="project">
+<h3>Spotify Music UI</h3>
+<p>Website musik modern dengan tampilan seperti Spotify.</p>
+</div>
+
+<div class="project">
+<h3>AI Chat Website</h3>
+<p>Website AI futuristik menggunakan API ChatGPT.</p>
+</div>
+
+<div class="project">
+<h3>Game Store Design</h3>
+<p>Landing page elegant dengan efek glass modern.</p>
+</div>
+
+<div class="project">
+<h3>Roblox Builder</h3>
+<p>Script terrain, floating island, dan map generator.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+</body>
+</html>
